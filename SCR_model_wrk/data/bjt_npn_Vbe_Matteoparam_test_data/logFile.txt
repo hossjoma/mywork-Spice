@@ -1,0 +1,21 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+
+DC DC1[1] <SCR_model_lib:bjt_npn_Vbe_Matteoparam_test:schematic>   X=(0->2)
+...........................................................................................Warning detected by hpeesofsim during DC analysis `DC1'.
+    Circuit converged with at least one device's P-N junction current
+            exceeding the explosion current and junction has been linearized.
+            You may want to increase the explosion current in the device model or in
+            the Options (if the parameter is not given in the model) and resimulate.
+            You may need to increase Maximum number of warnings under Output tab
+            in Options to see which devices have been linearized.
+Warning detected by hpeesofsim during DC analysis `DC1'.
+    BJT `qn1' explosion current exceeded.
+..............................................................................................................
+
+Resource usage:
+  Total stopwatch time     =     0.76 seconds.
+

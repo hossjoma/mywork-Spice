@@ -1,0 +1,51 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 5
+
+
+CT Sweep1[1] <SCR_model_lib:bjt_npn_Avalanche_test_Transient:schematic>  
+    Matrix is singular (detected between nodes or branches `N__8' and `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+
+    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+..    Matrix is singular (detected at node or branch `SDD3P1.i1').
+Adding gmin to branches
+Warning detected by hpeesofsim during DC analysis `Tran1'.
+    Circuit converged after a virtual resistance of 1 TOhms 
+    was added between each node and ground, and a virtual 
+    resistance of 1 pOhms was inserted in each current branch. 
+    Possible causes include floating nodes or missing ground.
+
+
+
+TRAN Sweep1[1].Tran1[1] <SCR_model_lib:bjt_npn_Avalanche_test_Transient:schematic>  =  time=(0 s->120 ns)
+    Matrix is singular (detected between nodes or branches `SDD3P1.i1' and `SDD3P1.i2').
+Adding gmin to branches
+
+
+Resource usage:
+  Total stopwatch time     =     0.83 seconds.
+
