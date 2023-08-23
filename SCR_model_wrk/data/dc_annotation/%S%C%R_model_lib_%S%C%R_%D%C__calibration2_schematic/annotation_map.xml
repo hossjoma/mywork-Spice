@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotation_files Version="1.0" Time="Sa Mär 20 14:22:24 2021" Simulator="hpeesofsim">
+ <File name="annotation_1.xml">
+  <Controller name="DC1">
+   <P>Ibias: 9.9999999999999998e-13</P>
+  </Controller>
+ </File>
+</annotation_files>
