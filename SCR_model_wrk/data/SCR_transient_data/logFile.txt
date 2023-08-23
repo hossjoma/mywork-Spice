@@ -1,0 +1,19 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 5
+
+Warning detected by hpeesofsim during circuit set up.
+    analysis `DC1' is not found for ParamSweep component `Sweep1'.
+Warning detected by hpeesofsim during circuit set up.
+    No analyses found for ParamSweep component `Sweep1'.
+
+
+TRAN Tran1[1] <SCR_model_lib:SCR_transient:schematic>   time=(0 s->160 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     0.80 seconds.
+

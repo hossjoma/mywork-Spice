@@ -1,0 +1,18 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+CT Sweep1[1] <SCR_model_lib:2_fingers_extra RCline:schematic>   C2=(0->10)
+
+
+TRAN Sweep1[1].Tran1[1/2] <SCR_model_lib:2_fingers_extra RCline:schematic>  C2=0  time=(0 s->640 ns)
+
+
+
+TRAN Sweep1[1].Tran1[2/2] <SCR_model_lib:2_fingers_extra RCline:schematic>  C2=10  time=(0 s->640 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     0.70 seconds.
+

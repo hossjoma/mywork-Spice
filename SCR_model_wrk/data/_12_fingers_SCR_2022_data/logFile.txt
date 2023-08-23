@@ -1,0 +1,30 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+CT Sweep1[1] <SCR_model_lib:12_fingers_SCR_2022:schematic>   Vtot=(100->500)
+
+
+TRAN Sweep1[1].Tran1[1/5] <SCR_model_lib:12_fingers_SCR_2022:schematic>  Vtot=100  time=(0 s->700 ns)
+
+
+
+TRAN Sweep1[1].Tran1[2/5] <SCR_model_lib:12_fingers_SCR_2022:schematic>  Vtot=200  time=(0 s->700 ns)
+
+
+
+TRAN Sweep1[1].Tran1[3/5] <SCR_model_lib:12_fingers_SCR_2022:schematic>  Vtot=300  time=(0 s->700 ns)
+
+
+
+TRAN Sweep1[1].Tran1[4/5] <SCR_model_lib:12_fingers_SCR_2022:schematic>  Vtot=400  time=(0 s->700 ns)
+
+
+
+TRAN Sweep1[1].Tran1[5/5] <SCR_model_lib:12_fingers_SCR_2022:schematic>  Vtot=500  time=(0 s->700 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     1.51 seconds.
+

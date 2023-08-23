@@ -1,0 +1,28 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+Warning detected by hpeesofsim during circuit set up.
+    Name 'I2' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'M' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'n' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'I3' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'Vbc' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'Vbd' to be output is not an expression.
+Warning detected by hpeesofsim during circuit set up.
+    Name 'Ibias' to be output is not an expression.
+
+CT Sweep1[1] <SCR_model_lib:student_circuit:schematic>  
+
+DC Sweep1[1].DC1[1] <SCR_model_lib:student_circuit:schematic>  =  Vce=(0->20)
+.....................
+
+Resource usage:
+  Total stopwatch time     =     0.68 seconds.
+

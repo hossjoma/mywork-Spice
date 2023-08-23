@@ -1,0 +1,20 @@
+
+hpeesofsim (*) 450.update1.4 Apr  6 2017, MINT version 4
+    (64-bit linux built: 04/06/17 19:15:45)
+Copyright 1989 - 2016 Keysight Technologies.
+
+
+
+TRAN Tran1[1] <SCR_model_lib:SCR_w_MOS_triggered_test_pulse:schematic>   time=(0 s->120 ns)
+
+
+Resource usage:
+    User time                 =     0.28 seconds.
+    System time               =     0.10 seconds.
+    Total CPU time            =     0.37 seconds.
+    Simulation stopwatch time =     0.07 seconds.
+    Total stopwatch time      =     0.38 seconds.
+
+    Physical memory used: 61.8 MBytes.
+    Incremental virtual memory (data only) used:  19.6 MBytes.
+

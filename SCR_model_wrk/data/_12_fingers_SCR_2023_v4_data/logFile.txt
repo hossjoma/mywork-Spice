@@ -1,0 +1,14 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+CT Sweep1[1] <SCR_model_lib:12_fingers_SCR_2023_v4:schematic>  
+
+
+TRAN Sweep1[1].Tran1[1] <SCR_model_lib:12_fingers_SCR_2023_v4:schematic>  =  time=(0 s->100 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     0.83 seconds.
+

@@ -1,0 +1,22 @@
+
+hpeesofsim (*) 470.shp Oct 16 2017, MINT version 4
+    (64-bit windows built: Tue Oct 17, 2017 04:23:43 +0000)
+Copyright 1989 - 2017 Keysight Technologies.
+
+
+4 spare nodes and 2 spare devices are removed.
+The details can be found in file 'C:\Users\staff\Desktop\Hasan\SCR\From Guido\3) ADS SCR model\SCR_model_wrk\data\.\SCR_Avalanche_Transient_test_data\spare_removal.txt'.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 10
+
+
+CT Sweep1[1] <SCR_model_lib:SCR_Avalanche_Transient_test:schematic>  
+
+
+TRAN Sweep1[1].Tran1[1] <SCR_model_lib:SCR_Avalanche_Transient_test:schematic>  =  time=(0 s->160 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     0.66 seconds.
+

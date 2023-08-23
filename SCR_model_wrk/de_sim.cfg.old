@@ -1,0 +1,9 @@
+SYSTEM_CUSTOM_CIRCUIT_SYMBOLS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS}:{$HPEESOF_DIR}/custom/{%PROJECT1}/symbols
+DESIGN_KIT_DATA_FILES=/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/models:/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/models
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS=/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/artwork:/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/artwork:/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/artwork
+SYSTEM_CUSTOM_CIRCUIT_DESIGNS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS}:{$HPEESOF_DIR}/custom/{%PROJECT1}/designs
+VIA_CONFIG_PATH={%DESIGN_KIT_VIA_CONFIG_PATH}:.:{%PROJECT_SEARCH_PATH}:{$HOME}/hpeesof/de/defaults:{$HPEESOF_DIR}/de/defaults:{%USER_VIA_CONFIG_PATH}
+SCHEM_FILE_OPEN_HISTORY_1=SCR_model_lib:SCR_w_diode_triggered_test_pulse:schematic
+SCHEM_FILE_OPEN_HISTORY_2=MOS_trig_SCR_lib:SCR_w_diode_triggered_test_pulse:schematic
+SCHEM_FILE_OPEN_HISTORY_3=SCR_model_lib:SCR_w_MOS_triggered_test_pulse:schematic
+SCHEM_FILE_OPEN_HISTORY_4=MOS_trig_SCR_lib:SCR_w_MOS_triggered_test:schematic

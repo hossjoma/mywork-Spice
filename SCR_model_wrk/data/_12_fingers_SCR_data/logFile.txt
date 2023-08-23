@@ -1,0 +1,42 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+
+TRAN Tran1[1] <SCR_model_lib:12_fingers_SCR:schematic>   time=(0 s->300 ns)
+
+  iter = 1   RHS I= 2.974e+06 V= 4.159e-09 k fail RHS I[N__38]= 9.509e+06 (5e+02x)  dV= 1.190e+01 dI= 6.042e+06 
+  iter = 2   RHS I= 1.881e+03 V= 2.849e-06 k fail RHS V[SDD4P1.i2]= 2.297e-05 (22x)  dV= 3.454e-01 dI= 3.169e+05 
+  iter = 3   RHS I= 1.574e+00 V= 1.848e-09 
+  iter = 1   RHS I= 1.135e+07 V= 3.644e-05 k fail RHS I[N__38]= 3.489e+07 (4.5e+02x)  dV= 5.518e+00 dI= 1.570e+07 
+  iter = 2   RHS I= 2.657e+02 V= 3.351e-06 k fail RHS V[SDD4P1.i2]= 2.702e-05 (26x)  dV= 9.296e-02 dI= 5.687e+04 
+  iter = 3   RHS I= 7.494e-02 V= 1.848e-09 
+  iter = 1   RHS I= 8.793e+06 V= 1.848e-09 k fail RHS I[N__38]= 2.738e+07 (5e+02x)  dV= 9.016e+00 dI= 4.389e+04 
+  iter = 2   RHS I= 1.897e+03 V= 1.150e-11  dV= 2.611e-01 dI= 4.260e+05 
+  iter = 3   RHS I= 1.581e+00 V= 5.545e-09 
+  iter = 1   RHS I= 8.515e+05 V= 1.809e-06 k fail RHS I[N__38]= 2.645e+06 (45x)  dV= 4.139e+00 dI= 3.093e+06 
+  iter = 2   RHS I= 2.634e+02 V= 4.769e-07 k fail RHS V[SDD4P1.i2]= 3.844e-06 (3.8x)  dV= 6.891e-02 dI= 7.495e+04 
+  iter = 3   RHS I= 7.318e-02 V= 6.086e-14 
+  iter = 1   RHS I= 1.179e+07 V= 9.243e-12 k fail RHS I[N__38]= 3.660e+07 (5e+02x)  dV= 6.812e+00 dI= 4.512e+04 
+  iter = 2   RHS I= 1.907e+03 V= 1.848e-09  dV= 1.966e-01 dI= 5.703e+05 
+  iter = 3   RHS I= 1.582e+00 V= 3.697e-09 
+  iter = 1   RHS I= 1.111e+06 V= 1.785e-06 k fail RHS I[N__38]= 3.442e+06 (44x)  dV= 3.097e+00 dI= 4.143e+06 
+  iter = 2   RHS I= 2.604e+02 V= 4.695e-07 k fail RHS V[SDD4P1.i2]= 3.785e-06 (3.8x)  dV= 5.094e-02 dI= 9.851e+04 
+  iter = 3   RHS I= 6.897e-02 V= 5.571e-14 
+  iter = 1   RHS I= 1.452e+07 V= 6.169e-05 k fail RHS I[N__38]= 4.473e+07 (3.7e+02x)  dV= 1.640e+02 dI= 8.138e+07 
+  iter = 2   RHS I= 2.371e+05 V= 4.315e-04 k fail RHS I[N__38]= 1.054e+06 (2.3x)  dV= 9.567e+01 dI= 6.167e+07 
+  iter = 3   RHS I= 7.942e+04 V= 1.805e-04 k fail RHS I[N__38]= 3.514e+05 (1.5x)  dV= 9.714e+01 dI= 6.262e+07 
+  iter = 4   RHS I= 8.349e+04 V= 2.039e-04 k fail RHS I[N__38]= 3.717e+05 (3.8x)  dV= 9.175e+01 dI= 5.914e+07 
+  iter = 5   RHS I= 7.500e+04 V= 1.880e-04 k fail RHS I[N__38]= 3.346e+05 (1.5x)  dV= 1.042e+02 dI= 6.714e+07 Error detected by hpeesofsim during TRAN analysis `Tran1'.
+    Internal timestep 5.67503e-22 too small at time 1.06637e-08.
+
+
+
+-------------------------------------------------------------------------------
+Simulation finished with errors.
+-------------------------------------------------------------------------------
+
+Resource usage:
+  Total stopwatch time     =     0.73 seconds.
+

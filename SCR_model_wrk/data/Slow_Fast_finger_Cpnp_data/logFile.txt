@@ -1,0 +1,30 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+CT Sweep1[1] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>   Cpnp=(500->900)
+
+
+TRAN Sweep1[1].Tran1[1/5] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>  Cpnp=500  time=(0 s->640 ns)
+
+
+
+TRAN Sweep1[1].Tran1[2/5] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>  Cpnp=600  time=(0 s->640 ns)
+
+
+
+TRAN Sweep1[1].Tran1[3/5] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>  Cpnp=700  time=(0 s->640 ns)
+
+
+
+TRAN Sweep1[1].Tran1[4/5] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>  Cpnp=800  time=(0 s->640 ns)
+
+
+
+TRAN Sweep1[1].Tran1[5/5] <SCR_model_lib:Slow_Fast_finger_Cpnp:schematic>  Cpnp=900  time=(0 s->640 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     2.42 seconds.
+

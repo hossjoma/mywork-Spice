@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dc_annotation_options>
+ <options library="SCR_model_lib" ToggleVoltage="false" view="schematic" cell="SCR_Avalanche_test"/>
+</dc_annotation_options>

@@ -1,0 +1,15 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Error detected by hpeesofsim in SDD `SDD3P1' during circuit set up.
+    Illegal variable '_i3'. Port 3 equation is explicit.
+
+
+-------------------------------------------------------------------------------
+Simulation finished with errors.
+-------------------------------------------------------------------------------
+
+Resource usage:
+  Total stopwatch time     =     0.50 seconds.
+

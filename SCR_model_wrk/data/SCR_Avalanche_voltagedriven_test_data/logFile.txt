@@ -1,0 +1,27 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim during circuit set up.
+    Name 'Ibias' to be output is not an expression.
+
+CT Sweep1[1] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>   Bfn=(2->10)
+
+DC Sweep1[1].DC1[1/5] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>  Bfn=2  Vbias=(0->10)
+...........
+
+DC Sweep1[1].DC1[2/5] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>  Bfn=4  Vbias=(0->10)
+...........
+
+DC Sweep1[1].DC1[3/5] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>  Bfn=6  Vbias=(0->10)
+...........
+
+DC Sweep1[1].DC1[4/5] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>  Bfn=8  Vbias=(0->10)
+...........
+
+DC Sweep1[1].DC1[5/5] <SCR_model_lib:SCR_Avalanche_voltagedriven_test:schematic>  Bfn=10  Vbias=(0->10)
+...........
+
+Resource usage:
+  Total stopwatch time     =     0.61 seconds.
+

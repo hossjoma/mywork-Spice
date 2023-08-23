@@ -1,0 +1,25 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 6
+
+
+DC DC1[1] <SCR_model_lib:SCR_DC__calibration:schematic>   Ibias=(1e-12->10)
+...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Warning detected by hpeesofsim during DC analysis `DC1'.
+    Circuit converged with at least one device's P-N junction current
+            exceeding the explosion current and junction has been linearized.
+            You may want to increase the explosion current in the device model or in
+            the Options (if the parameter is not given in the model) and resimulate.
+            You may need to increase Maximum number of warnings under Output tab
+            in Options to see which devices have been linearized.
+Warning detected by hpeesofsim during DC analysis `DC1'.
+    BJT `pnp1' explosion current exceeded.
+....Warning detected by hpeesofsim during DC analysis `DC1'.
+    BJT `npn1' explosion current exceeded.
+......................................................................................................
+
+Resource usage:
+  Total stopwatch time     =     0.83 seconds.
+

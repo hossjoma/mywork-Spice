@@ -1,0 +1,24 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 5
+
+
+
+TRAN Tran1[1] <SCR_model_lib:Tr_test:schematic>   time=(0 s->120 ns)
+
+  iter = 1   RHS I= 4.248e+14 V= 0.000e+00 k fail RHS I[N__8]= 9.963e+14 (5e+02x)  dV= 1.295e+01 dI= 3.163e+14 
+  iter = 1   RHS I= 4.248e+14 V= 0.000e+00 k fail RHS I[N__8]= 9.963e+14 (5e+02x)  dV= 8.091e-01 dI= 3.163e+14 Error detected by hpeesofsim during TRAN analysis `Tran1'.
+    Internal timestep 2.01817e-23 too small at time 1.13046e-07.
+
+
+
+-------------------------------------------------------------------------------
+Simulation finished with errors.
+-------------------------------------------------------------------------------
+
+Resource usage:
+  Total stopwatch time     =     0.75 seconds.
+

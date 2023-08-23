@@ -1,0 +1,4 @@
+EESOF_MODEL_PATH=%DESIGN_KIT_MODEL_PATH:$ICCAP_MODEL_PATH:%ICCAP_MODEL_PATH:{%DESIGN_KIT_MODEL_PATH}
+DESIGN_KIT_SIM_FILE_PATH=/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/models:/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/models
+SIM_FILE_PATH=$USER_SIM_FILE_PATH:%USER_SIM_FILE_PATH:$DE_SIM_FILE_PATH:%DE_SIM_FILE_PATH:.:..:../data:../networks:%DESIGN_KIT_SIM_FILE_PATH:$HPEESOF_DIR/adsptolemy/wtb:{%DESIGN_KIT_SIM_FILE_PATH}
+DE_SIM_FILE_PATH=./data:/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt/2.0/nwt_ads_pdk/circuit/models:/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/data;/sysmnt/cadappl_sde/ictools/nwt_lib/2015.03/nwt_lib_ads_pdk/circuit/models

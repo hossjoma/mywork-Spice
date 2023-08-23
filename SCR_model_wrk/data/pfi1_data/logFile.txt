@@ -1,0 +1,19 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim during netlist flattening.
+    Short `t6' is shorted.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 2
+    Number of nodes with no DC path to ground (topology corrected): 86
+
+
+
+TRAN Tran1[1] <SCR_model_lib:pfi1:schematic>   time=(0 s->10 us)
+
+
+Resource usage:
+  Total stopwatch time     =     1.50 seconds.
+

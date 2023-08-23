@@ -1,0 +1,12 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+
+
+TRAN Tran1[1] <SCR_model_lib:More_stage_RC_Line:schematic>   time=(0 s->20 ns)
+
+
+Resource usage:
+  Total stopwatch time     =    11.48 seconds.
+

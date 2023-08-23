@@ -1,0 +1,269 @@
+; Top Design: "SCR_model_lib:Poster_2023_default:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="SCR_model_lib:Poster_2023_default:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+
+Bfpnp=5
+Bfnpn=3.3
+reversebeta=0.5
+Tran:Tran1 StartTime=0.0 nsec StopTime=700 nsec MaxTimeStep=0.1 nsec LimitStepForTL=yes TimeStepControl=2 TruncTol=7.0 ChargeTol=1.0e-14 IntegMethod=0 MaxGearOrder=2 \
+Mu=0.5 MaxOrder=4 Freq[1]=1.0 GHz Order[1]=3 HB_Window=no \
+HB_Sol=no ImpApprox=no ShortTL_Delay=1.0 psec ImpMode=1 UseInitCond=no \
+LoadGminDC=no CheckKCL=yes CheckOnlyDeltaV=yes OverloadAlert=no DeviceBypass=no \
+MaxIters=5 MaxItersDC=200 DevOpPtLevel=0 StatusLevel=2 OutputAllPoints=yes \
+NoiseScale=1 ImpEnforcePassivity=yes \
+OutputPlan="Tran1_Output" 
+
+OutputPlan:Tran1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+
+
+M=1/(1-((_v1/Vbd)^n))
+Vbd=12
+n=2
+
+Rnwell=50
+Ibias=-0.1
+
+I2=(M-1)*(_i3+_i4) -_i2
+I3=_v3
+I4=_v4
+model npn BJT NPN=1 PNP=0 Is=Is A Bf=Bfnpn Br=reversebeta Cje=Cje Cjc=Cjc Cjs=Cjs Tf=Tf Tr=Tr Lateral=0 RbModel=1 Approxqb=1 
+model pnp BJT NPN=0 PNP=1 Is=Is A Bf=Bfpnp Br=reversebeta Cje=Cje Cjc=Cjc Cjs=Cjs Tf=Tf Tr=Tr Lateral=0 RbModel=1 Approxqb=1 
+R:Rnwell1  N__38 Vce_npn R=Rnwell Ohm Noise=yes 
+R:R2  Vtot N__10 R=Rtl Ohm Noise=yes 
+"pnp":pnp1  N__8 Vce_npn N__38 Mode=1 Noise=yes 
+"npn":npn1  N__154 N__125 N__22 Mode=1 Noise=yes 
+
+Cjs=1.0 fF
+Cjc=30.0 fF
+Cje=35.0 fF
+V_Source:SRC1  Vtot 0 Type="VtPulse" V_Tran=erf_pulse(time, 0 V,Vtot V,0 nsec,1 nsec,1 nsec,700 nsec,10 sec) SaveCurrent=1 
+Short:Idut  N__10 Vdut Mode=0 SaveCurrent=yes 
+
+Is=1e-12
+SDD:SDD4P1  Vce_npn N__125 Vce_npn N__125 Vce_npn N__154 N__8 N__125  I[1,0]=0  F[2,0]=I2  F[3,0]=I3  F[4,0]=I4  
+
+Rtl=50
+R:R45  N__59 N__140 R=R1 Ohm Noise=yes 
+R:Rtop1  Vdut N__38 R=Rtop Ohm Noise=yes 
+R:Rnwell2  N__95 N__51 R=Rnwell Ohm Noise=yes 
+"pnp":pnp2  N__21 N__51 N__95 Mode=1 Noise=yes 
+"npn":npn2  N__51 N__21 N__124 Mode=1 Noise=yes 
+R:R2i1  N__26 N__23 R=R2 Ohm Noise=yes 
+R:Rbot3  N__126 0 R=Rbot Ohm Noise=yes 
+R:Rtop2  Vdut N__95 R=Rtop Ohm Noise=yes 
+Short:I1  N__22 N__71 Mode=0 SaveCurrent=yes 
+Short:I4  N__35 N__159 Mode=0 SaveCurrent=yes 
+R:R2i3  N__76 N__85 R=R2 Ohm Noise=yes 
+R:Rbot5  N__157 0 R=Rbot Ohm Noise=yes 
+R:R47  N__89 N__43 R=R1 Ohm Noise=yes 
+C:C26  N__24 N__122 C=C1 
+"pnp":pnp6  N__54 N__34 N__58 Mode=1 Noise=yes 
+R:R20  N__93 N__11 R=R1 Ohm Noise=yes 
+R:R3i3  N__85 N__86 R=R2 Ohm Noise=yes 
+"pnp":pnp9  N__105 N__119 N__24 Mode=1 Noise=yes 
+R:R53  N__122 N__118 R=R1 Ohm Noise=yes 
+R:R5i7  N__143 N__67 R=R2 Ohm Noise=yes 
+R:R1i1  N__21 N__26 R=R2 Ohm Noise=yes 
+R:R19  N__81 N__96 R=R1 Ohm Noise=yes 
+R:R3i1  N__23 N__25 R=R2 Ohm Noise=yes 
+R:R4i1  N__25 N__14 R=R2 Ohm Noise=yes 
+R:R5i1  N__14 N__27 R=R2 Ohm Noise=yes 
+R:Rtop3  Vdut N__92 R=Rtop Ohm Noise=yes 
+R:Rnwell3  N__92 N__100 R=Rnwell Ohm Noise=yes 
+"pnp":pnp3  N__27 N__100 N__92 Mode=1 Noise=yes 
+"npn":npn3  N__100 N__27 N__42 Mode=1 Noise=yes 
+Short:I12  N__155 N__40 Mode=0 SaveCurrent=yes 
+R:R18  N__98 N__99 R=R1 Ohm Noise=yes 
+C:C1i1  N__26 N__123 C=C2 
+C:C2i1  N__23 N__123 C=C2 
+C:C3i1  N__25 N__126 C=C2 
+C:C4i1  N__14 N__126 C=C2 
+R:R39  N__60 N__73 R=R1 Ohm Noise=yes 
+R:Rnwell4  N__94 N__96 R=Rnwell Ohm Noise=yes 
+R:Rtop4  Vdut N__94 R=Rtop Ohm Noise=yes 
+"pnp":pnp11  N__150 N__120 N__113 Mode=1 Noise=yes 
+C:C6  N__38 N__98 C=C1 
+Short:I2  N__124 N__123 Mode=0 SaveCurrent=yes 
+R:R37  N__140 N__63 R=R1 Ohm Noise=yes 
+R:Rtop11  Vdut N__24 R=Rtop Ohm Noise=yes 
+"pnp":pnp4  N__77 N__96 N__94 Mode=1 Noise=yes 
+"npn":npn4  N__96 N__77 N__35 Mode=1 Noise=yes 
+Short:I11  N__153 N__139 Mode=0 SaveCurrent=yes 
+R:R43  N__79 N__32 R=R1 Ohm Noise=yes 
+"npn":npn6  N__34 N__54 N__136 Mode=1 Noise=yes 
+R:R44  N__39 N__7 R=R1 Ohm Noise=yes 
+C:C3i3  N__86 N__157 C=C2 
+R:Rtop5  Vdut N__30 R=Rtop Ohm Noise=yes 
+R:Rtop12  Vdut N__113 R=Rtop Ohm Noise=yes 
+C:C22  Vc10 N__91 C=C1 
+"npn":npn5  N__60 N__97 N__115 Mode=1 Noise=yes 
+C:C2i3  N__85 N__159 C=C2 
+R:R38  N__73 N__59 R=R1 Ohm Noise=yes 
+C:C3i6  N__111 N__139 C=C2 
+R:R2i7  N__112 N__109 R=R2 Ohm Noise=yes 
+R:R4i6  N__111 N__116 R=R2 Ohm Noise=yes 
+C:C12  Vc9 N__32 C=C1 
+R:R40  N__6 N__89 R=R1 Ohm Noise=yes 
+R:Rbot10  N__137 0 R=Rbot Ohm Noise=yes 
+R:R17  N__15 N__51 R=R1 Ohm Noise=yes 
+Short:I5  N__115 N__157 Mode=0 SaveCurrent=yes 
+C:C17  N__30 N__59 C=C1 
+"pnp":pnp12  N__148 N__68 N__29 Mode=1 Noise=yes 
+R:Rtop9  Vdut Vc9 R=Rtop Ohm Noise=yes 
+"pnp":pnp8  N__87 N__7 N__152 Mode=1 Noise=yes 
+R:R3i6  N__3 N__61 R=R2 Ohm Noise=yes 
+R:R4i5  N__33 N__52 R=R2 Ohm Noise=yes 
+
+C1=20 pF
+R1=2
+C:C5  N__95 N__15 C=C1 
+R:R16  N__100 N__101 R=R1 Ohm Noise=yes 
+R:Rnwell9  N__83 N__68 R=Rnwell Ohm Noise=yes 
+C:C2i5  N__44 N__47 C=C2 
+R:R15  Vce_npn N__103 R=0 Ohm Noise=yes 
+R:R2i5  N__56 N__44 R=R2 Ohm Noise=yes 
+R:Rbot7  N__128 0 R=Rbot Ohm Noise=yes 
+R:Rbot11  N__139 0 R=Rbot Ohm Noise=yes 
+C:C3i5  N__33 N__128 C=C2 
+R:R21  N__75 N__120 R=R1 Ohm Noise=yes 
+R:R2i6  N__2 N__3 R=R2 Ohm Noise=yes 
+R:Rbot9  N__135 0 R=Rbot Ohm Noise=yes 
+C:C4  N__92 N__101 C=C1 
+R:R49  N__32 N__50 R=R1 Ohm Noise=yes 
+"npn":npn11  N__102 N__57 N__151 Mode=1 Noise=yes 
+R:R3i5  N__44 N__33 R=R2 Ohm Noise=yes 
+R:R22  N__121 N__122 R=R1 Ohm Noise=yes 
+R:R41  N__43 N__17 R=R1 Ohm Noise=yes 
+C:C11  N__24 N__121 C=C1 
+R:R1i6  N__87 N__2 R=R2 Ohm Noise=yes 
+R:R23  N__48 N__108 R=R1 Ohm Noise=yes 
+C:C25  N__133 N__89 C=C1 
+R:R1i7  N__114 N__82 R=R2 Ohm Noise=yes 
+"pnp":pnp10  N__57 N__146 N__132 Mode=1 Noise=yes 
+R:R42  N__17 N__39 R=R1 Ohm Noise=yes 
+C:C23  N__30 N__73 C=C1 
+R:Rtop6  Vdut N__58 R=Rtop Ohm Noise=yes 
+R:R5i5  N__52 N__45 R=R2 Ohm Noise=yes 
+R:R4i3  N__86 N__72 R=R2 Ohm Noise=yes 
+C:C3  N__94 N__11 C=C1 
+R:R4i7  N__61 N__5 R=R2 Ohm Noise=yes 
+R:R14  N__101 N__93 R=R1 Ohm Noise=yes 
+R:R13  N__11 N__81 R=R1 Ohm Noise=yes 
+C:C2i6  N__3 N__13 C=C2 
+R:R5i6  N__5 N__148 R=R2 Ohm Noise=yes 
+R:R1i3  N__77 N__76 R=R2 Ohm Noise=yes 
+C:C4i3  N__72 N__157 C=C2 
+R:R50  N__91 N__48 R=R1 Ohm Noise=yes 
+R:Rbot8  N__13 0 R=Rbot Ohm Noise=yes 
+R:R48  N__50 N__91 R=R1 Ohm Noise=yes 
+C:C2  N__38 N__103 C=C1 
+C:C1  N__95 N__99 C=C1 
+R:R12  N__99 N__15 R=R1 Ohm Noise=yes 
+R:R11  N__103 N__98 R=R1 Ohm Noise=yes 
+
+C2=2 pF
+R2=1.23
+R:R46  N__63 N__34 R=R1 Ohm Noise=yes 
+R:Rnwell12  N__113 N__120 R=Rnwell Ohm Noise=yes 
+R:Rbot6  N__47 0 R=Rbot Ohm Noise=yes 
+R:R52  N__119 N__121 R=R1 Ohm Noise=yes 
+R:Rtop10  Vdut N__129 R=Rtop Ohm Noise=yes 
+R:R1i5  N__54 N__56 R=R2 Ohm Noise=yes 
+R:Rnwell5  N__30 N__60 R=Rnwell Ohm Noise=yes 
+"npn":npn9  N__120 N__150 N__155 Mode=1 Noise=yes 
+C:C18  N__58 N__140 C=C1 
+R:Rtop8  Vdut N__152 R=Rtop Ohm Noise=yes 
+R:R51  N__118 N__75 R=R1 Ohm Noise=yes 
+"pnp":pnp7  N__45 N__6 N__133 Mode=1 Noise=yes 
+R:Rbot12  N__40 0 R=Rbot Ohm Noise=yes 
+R:Rnwell6  N__58 N__34 R=Rnwell Ohm Noise=yes 
+C:C1i7  N__82 N__137 C=C2 
+C:C2i7  N__109 N__137 C=C2 
+"pnp":pnp5  N__97 N__60 N__30 Mode=1 Noise=yes 
+R:Rnwell11  N__24 N__119 R=Rnwell Ohm Noise=yes 
+R:Rnwell10  N__55 N__110 R=Rnwell Ohm Noise=yes 
+C:C24  N__88 N__39 C=C1 
+C:C4i5  N__52 N__128 C=C2 
+R:Rnwell7  N__133 N__6 R=Rnwell Ohm Noise=yes 
+R:R3i7  N__109 N__142 R=R2 Ohm Noise=yes 
+R:Rnwell8  N__152 N__7 R=Rnwell Ohm Noise=yes 
+"npn":npn10  N__119 N__105 N__153 Mode=1 Noise=yes 
+C:C7  N__94 N__81 C=C1 
+R:R5i3  N__72 N__28 R=R2 Ohm Noise=yes 
+R:Rtop7  Vdut N__133 R=Rtop Ohm Noise=yes 
+C:C8  N__92 N__93 C=C1 
+"npn":npn12  N__104 N__148 N__149 Mode=1 Noise=yes 
+"npn":npn8  N__7 N__87 N__147 Mode=1 Noise=yes 
+"npn":npn7  N__6 N__45 N__145 Mode=1 Noise=yes 
+Short:I7  N__145 N__128 Mode=0 SaveCurrent=yes 
+Short:I3  N__42 N__126 Mode=0 SaveCurrent=yes 
+Short:I8  N__147 N__13 Mode=0 SaveCurrent=yes 
+Short:I10  N__151 N__137 Mode=0 SaveCurrent=yes 
+Short:I9  N__149 N__135 Mode=0 SaveCurrent=yes 
+C:C1i5  N__56 N__47 C=C2 
+C:C1i3  N__76 N__159 C=C2 
+C:C27  N__58 N__63 C=C1 
+C:C20  N__88 N__17 C=C1 
+C:C1i6  N__2 N__13 C=C2 
+C:C3i7  N__61 N__135 C=C2 
+C:C19  N__133 N__43 C=C1 
+C:C4i6  N__5 N__135 C=C2 
+C:C9  Vc10 N__48 C=C1 
+C:C4i7  N__74 N__139 C=C2 
+C:C28  N__113 N__118 C=C1 
+C:C10  N__113 N__75 C=C1 
+C:C21  Vc9 N__50 C=C1 
+
+Rtop=0
+Rbot=0
+
+Tf=0
+Tr=0
+Short:I6  N__136 N__47 Mode=0 SaveCurrent=yes 
+R:Rbot4  N__159 0 R=Rbot Ohm Noise=yes 
+R:Rbot2  N__123 0 R=Rbot Ohm Noise=yes 
+R:Rbot1  N__71 0 R=Rbot Ohm Noise=yes 
+Short:Idut3  N__144 N__108 Mode=0 SaveCurrent=yes 
+Short:Idut2  N__129 Vc10 Mode=0 SaveCurrent=yes 
+Short:Idut1  N__152 N__88 Mode=0 SaveCurrent=yes 
+
+Cbe=0 pF
+Cbep=0 pF
+Short:Idut4  N__110 N__144 Mode=0 SaveCurrent=yes 
+Short:IR11  N__129 N__132 Mode=0 SaveCurrent=yes 
+Short:IR10  N__129 N__55 Mode=0 SaveCurrent=yes 
+Short:IR9  Vc9 N__83 Mode=0 SaveCurrent=yes 
+
+Vtot=50
+ParamSweep:Sweep1 SimInstanceName[1]="Tran1" StatusLevel=2 
+
+Short:Idut5  N__146 N__110 Mode=0 SaveCurrent=yes 
+Short:I13  N__97 N__28 Mode=0 SaveCurrent=yes 
+Short:Idut6  N__79 N__107 Mode=0 SaveCurrent=yes 
+Short:Idut8  N__107 N__104 Mode=0 SaveCurrent=yes 
+Short:Idut9  N__144 N__102 Mode=0 SaveCurrent=yes 
+Short:Idut7  N__68 N__107 Mode=0 SaveCurrent=yes 
+Short:IR12  Vc9 N__29 Mode=0 SaveCurrent=yes 
+Short:I15  N__57 N__114 Mode=0 SaveCurrent=yes 
+Short:I16  N__82 N__112 Mode=0 SaveCurrent=yes 
+Short:I17  N__142 N__111 Mode=0 SaveCurrent=yes 
+Short:I18  N__116 N__74 Mode=0 SaveCurrent=yes 
+Short:I14  N__67 N__105 Mode=0 SaveCurrent=yes 
+Short:I19  N__74 N__143 Mode=0 SaveCurrent=yes 

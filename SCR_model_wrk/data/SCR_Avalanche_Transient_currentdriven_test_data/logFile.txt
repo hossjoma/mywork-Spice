@@ -1,0 +1,61 @@
+
+hpeesofsim (*) 512.update2.0 Feb 27 2020, MINT version 5
+    (64-bit windows built: Thu Feb 27, 2020 19:34:00 +0000)
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 2
+    Number of nodes with no DC path to ground (topology corrected): 13
+
+
+CT Sweep1[1] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>   Brp=(1e-06->100)
+
+
+TRAN Sweep1[1].Tran1[1/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=1e-06  time=(0 s->160 ns)
+
+Warning detected by hpeesofsim during TRAN analysis `Tran1'.
+    A virtual resistance of 1 TOhms 
+    was added between `N__5' and ground.
+
+
+TRAN Sweep1[1].Tran1[2/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=10e-06  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[3/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=100e-06  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[4/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=1e-03  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[5/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=10e-03  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[6/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=100e-03  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[7/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=1  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[8/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=10  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+
+TRAN Sweep1[1].Tran1[9/9] <SCR_model_lib:SCR_Avalanche_Transient_currentdriven_test:schematic>  Brp=100  time=(0 s->160 ns)
+    Matrix is singular (detected at node or branch `N__5').
+
+
+Resource usage:
+  Total stopwatch time     =     1.64 seconds.
+
