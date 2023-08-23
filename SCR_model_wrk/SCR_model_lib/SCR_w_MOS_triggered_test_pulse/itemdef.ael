@@ -1,0 +1,3 @@
+create_item("SCR_w_MOS_triggered_test_pulse","SCR_w_MOS_triggered_test_pulse","X",16,-1,NULL,"Component Parameters",NULL,"%43?global %;%d:%t %# %44?0%:%31?%C%:_net%c%;%;%e %b%r%8?%29?%:%30?%p %:%k%?[%1i]%;=%p %;%;%;%e%e","SCR_w_MOS_triggered_test_pulse","%t%b%r%38?%:\n%30?%s%:%k%?[%1i]%;=%s%;%;%e%e%;","SYM_3Port",3,NULL,0,
+create_parm("_M","Subcircuit parallel factor",1073807360,"StdFormSet",-1,prm("StdForm","1")),
+create_parm("mwscr","mwscr",0,"StdFileFormSet",-1,prm("StdForm","80")));
